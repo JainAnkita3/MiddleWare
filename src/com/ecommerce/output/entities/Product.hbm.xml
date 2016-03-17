@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 16, 2016 3:57:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ecommerce.output.entities.Product" table="PRODUCT">
+        <id name="productId" type="java.lang.Integer">
+            <column name="PRODUCTID" />
+            <generator class="assigned" />
+        </id>
+        <property name="productName" type="java.lang.String">
+            <column name="PRODUCTNAME" />
+        </property>
+        <property name="manufacturer" type="java.lang.String">
+            <column name="MANUFACTURER" />
+        </property>
+        <property name="price" type="java.math.BigDecimal">
+            <column name="PRICE" />
+        </property>
+        <property name="expiryDtm" type="java.util.Date">
+            <column name="EXPIRYDTM" />
+        </property>
+    </class>
+</hibernate-mapping>

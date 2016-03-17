@@ -1,8 +1,10 @@
+package connectJDBC;
 
 //Import required packages either from all sql or all mysql.
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -114,8 +116,16 @@ public class TestOracleConn {
 			System.out.println("Data from Department table \n    Department Name : '" + name1 + "'" + " Dept Id : '"
 					+ dept_id1 + "' Head id : '" + head_id + "'");
 		}
-	      rs.close();
-	      rs1.close();
+
+		String sql1 = "Select * from employee where emp_id = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql1);
+		for (int i = 1; i < 3; i++) {
+			pstmt.setInt(1, i); // 1 = position of ? mark in Where Clause
+			ResultSet rs2 = pstmt.executeQuery();
+
+		}
+		rs.close();
+		rs1.close();
 
 	}
 

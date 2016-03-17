@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 16, 2016 3:57:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ecommerce.output.entities.Addresses" table="ADDRESSES">
+        <id name="customerId" type="int">
+            <column name="CUSTOMERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="streetName" type="java.lang.String">
+            <column name="STREETNAME" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        <property name="apt" type="java.lang.String">
+            <column name="APT" />
+        </property>
+        <property name="addressType" type="java.lang.String">
+            <column name="ADDRESSTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

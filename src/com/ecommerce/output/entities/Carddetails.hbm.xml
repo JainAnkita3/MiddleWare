@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 16, 2016 3:57:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ecommerce.output.entities.Carddetails" table="CARDDETAILS">
+        <id name="id" type="com.ecommerce.output.entities.CarddetailsId">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+    </class>
+</hibernate-mapping>
